@@ -7,7 +7,7 @@ public class Arrow : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // Destroy after a few seconds
+        Destroy(gameObject, lifetime); // Clean up after time
     }
 
     void Update()
@@ -15,13 +15,13 @@ public class Arrow : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
-
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Heart"))
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            Debug.Log("Hit heart: " + other.gameObject.name);
+            Destroy(other.gameObject);  // Destroy heart
+            Destroy(gameObject);        // Destroy arrow too
         }
     }
 }
