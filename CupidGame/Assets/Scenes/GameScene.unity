@@ -418,9 +418,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartPrefabs:
-  - {fileID: 2263007957099037013, guid: ad26256ab7a105447b4fea9bab26e688, type: 3}
-  - {fileID: 7507032220935008010, guid: 35ecbc394851f2345aa96a209c6497a8, type: 3}
-  - {fileID: 3620123808061705144, guid: 2a6b012e2e0339c4f9ce943e8c5fe09b, type: 3}
+  - {fileID: 3620123808061705144, guid: 93a3b627436d11e4fbf80cc674d7eec8, type: 3}
+  - {fileID: 3620123808061705144, guid: 75abe0e64920bf34a8800c46187c8814, type: 3}
+  - {fileID: 3620123808061705144, guid: 71a59d2e0e1da024bad0bef1598f444a, type: 3}
+  - {fileID: 3620123808061705144, guid: 0d4b4eccb97040545b7fdc8f9f28aedd, type: 3}
+  - {fileID: 3620123808061705144, guid: 2427fe4f0112b9e4cbcda47c481cfc4d, type: 3}
+  - {fileID: 3620123808061705144, guid: 31eaedb6d38d50945ba654cd8813e8cf, type: 3}
+  - {fileID: 3620123808061705144, guid: 7ffe4a6f6d36b2d4bbb86dab4aa01fc7, type: 3}
+  - {fileID: 3620123808061705144, guid: 638f9410368a8944ab6136246cb75b0a, type: 3}
+  - {fileID: 3620123808061705144, guid: fc5703e91e01cfa4fa48159cfa90dcab, type: 3}
   player: {fileID: 551369560}
   spawnRadius: 9
   spawnHeight: 10
@@ -436,7 +442,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1017,7 +1023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8378700644747711038, guid: 88d7a24b4c436c24e864a6c81c544059, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8902552620527828809, guid: 88d7a24b4c436c24e864a6c81c544059, type: 3}
       propertyPath: m_LocalScale.x
