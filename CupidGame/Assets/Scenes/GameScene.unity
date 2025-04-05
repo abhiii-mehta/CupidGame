@@ -975,6 +975,7 @@ GameObject:
   - component: {fileID: 1086672017}
   - component: {fileID: 1086672016}
   - component: {fileID: 1086672020}
+  - component: {fileID: 1086672021}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1065,7 +1066,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 70.00001
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1099,6 +1100,123 @@ MonoBehaviour:
   arrowSpawnPoint: {fileID: 750485002}
   timeSlowFactor: 0.3
   holdThreshold: 0.2
+--- !u!114 &1086672021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086672014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1086672015}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!1001 &1156331401
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.4066515
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 51.79603
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.6366525
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966619888735415960, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443767783391466730, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
+      propertyPath: m_Name
+      value: Post-process Volume SlowTime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e2d29842a9db2e47b08f327814ba430, type: 3}
 --- !u!1 &1167241226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,3 +7170,4 @@ SceneRoots:
   - {fileID: 1994252317}
   - {fileID: 1616121673}
   - {fileID: 4162410049285728637}
+  - {fileID: 1156331401}
