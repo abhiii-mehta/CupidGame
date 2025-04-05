@@ -15,13 +15,19 @@ public class Arrow : MonoBehaviour
         transform.position += transform.forward * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Heart"))
         {
-            Debug.Log("Hit heart: " + other.gameObject.name);
-            Destroy(other.gameObject);  // Destroy heart
-            Destroy(gameObject);        // Destroy arrow too
+            Heart heart = other.GetComponent<Heart>();
+            if (heart != null)
+            {
+                OrderManager.Instance.CollectHeart(heart.heartColor);
+            }
+
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
+
 }
