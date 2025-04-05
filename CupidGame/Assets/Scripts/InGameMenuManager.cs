@@ -22,19 +22,25 @@ public class InGameMenuManager : MonoBehaviour
         isPaused = !isPaused;
         pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0 : 1;
+        SetCursorState(isPaused);
     }
+
 
     public void ShowGameOver()
     {
         gameOverPanel.SetActive(true);
         Time.timeScale = 0f;
+        SetCursorState(true);
     }
+
 
     public void ShowVictory()
     {
         victoryPanel.SetActive(true);
         Time.timeScale = 0f;
+        SetCursorState(true);
     }
+
 
     public void RestartGame()
     {
@@ -53,5 +59,13 @@ public class InGameMenuManager : MonoBehaviour
         isPaused = false;
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
+        SetCursorState(false);
     }
+
+    void SetCursorState(bool isVisible)
+    {
+        Cursor.visible = isVisible;
+        Cursor.lockState = isVisible ? CursorLockMode.None : CursorLockMode.Locked;
+    }
+
 }

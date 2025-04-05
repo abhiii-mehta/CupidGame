@@ -18,9 +18,8 @@ public class OrderManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(" OrderManager started");
+        Debug.Log("OrderManager started");
         GenerateNewOrder();
-
     }
 
     public void GenerateNewOrder()
@@ -28,7 +27,7 @@ public class OrderManager : MonoBehaviour
         collectedHearts.Clear();
         currentOrder.Clear();
 
-        int safety = 0; // just in case the loop never ends
+        int safety = 0;
 
         while (currentOrder.Count < orderSize && safety < 100)
         {
@@ -41,34 +40,31 @@ public class OrderManager : MonoBehaviour
             safety++;
         }
 
-        Debug.Log(" New Order: " + string.Join(" + ", currentOrder));
+        Debug.Log("New Order: " + string.Join(" + ", currentOrder));
     }
-
 
     public void CollectHeart(Heart.HeartColor color)
     {
         if (!currentOrder.Contains(color))
         {
-            Debug.Log($" Wrong heart! You shot: {color}. Expected: {string.Join(" + ", currentOrder)}");
-            Time.timeScale = 0f;
+            Debug.Log("Wrong heart! You shot: " + color + ". Expected: " + string.Join(" + ", currentOrder));
+            FindFirstObjectByType<InGameMenuManager>().ShowGameOver();
             return;
         }
 
         if (collectedHearts.Contains(color))
         {
-            Debug.Log($" Already collected: {color}");
+            Debug.Log("Already collected: " + color);
             return;
         }
 
         collectedHearts.Add(color);
-        Debug.Log($" Collected: {color}");
+        Debug.Log("Collected: " + color);
 
         if (collectedHearts.Count == currentOrder.Count)
         {
-            Debug.Log("Order complete! New round begins...");
-            GenerateNewOrder();
+            Debug.Log("Order complete! You win!");
+            FindFirstObjectByType<InGameMenuManager>().ShowVictory();
         }
     }
-
 }
-
