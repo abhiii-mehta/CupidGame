@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b88dcf6e99788748ad2905d4eb8a8d2
+guid: a1f84f7144c75ef48a7ce30e829d994c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HeartDeath_0
+      name: ShootAnim_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 787
-        height: 1080
+        width: 304
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b37dc2adeaba424189fb02c0028ea6b
-      internalID: 730982564
+      spriteID: ddd7a23e97ed4d84d885072a51b0c62d
+      internalID: 2057442940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeartDeath_1
+      name: ShootAnim_1
       rect:
         serializedVersion: 2
-        x: 787
+        x: 304
         y: 0
-        width: 787
-        height: 1080
+        width: 304
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f77ba6215a76c7f41adbb243a2ea8665
-      internalID: 1642206553
+      spriteID: d45400f6942e6c5408da3b4be4f77000
+      internalID: -1684375314
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeartDeath_2
+      name: ShootAnim_2
       rect:
         serializedVersion: 2
-        x: 1574
+        x: 608
         y: 0
-        width: 787
-        height: 1080
+        width: 304
+        height: 344
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,8 +156,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fee6ae3c35e14024dad61c92fe7d4105
-      internalID: -164318826
+      spriteID: 97d83b04022292f42b33a8689d117bd8
+      internalID: 1078757902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShootAnim_3
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 304
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f7cdc8d857a25459ffc7a5967c9d01
+      internalID: 778475548
       vertices: []
       indices: 
       edges: []
@@ -166,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5ef46ae863f46994bb8aadaaa600a133
     internalID: 0
     vertices: []
     indices: 
@@ -176,9 +198,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HeartDeath_0: 730982564
-      HeartDeath_1: 1642206553
-      HeartDeath_2: -164318826
+      ShootAnim_0: 2057442940
+      ShootAnim_1: -1684375314
+      ShootAnim_2: 1078757902
+      ShootAnim_3: 778475548
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
