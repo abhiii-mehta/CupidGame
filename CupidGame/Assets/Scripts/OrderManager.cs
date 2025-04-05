@@ -22,26 +22,28 @@ public class OrderManager : MonoBehaviour
         GenerateNewOrder();
     }
 
-    public void GenerateNewOrder()
+   
+
+public void GenerateNewOrder()
+{
+    collectedHearts.Clear();
+    currentOrder.Clear();
+
+    int safety = 0;
+
+    while (currentOrder.Count < orderSize && safety < 100)
     {
-        collectedHearts.Clear();
-        currentOrder.Clear();
-
-        int safety = 0;
-
-        while (currentOrder.Count < orderSize && safety < 100)
-        {
-            Heart.HeartColor randomColor = (Heart.HeartColor)Random.Range(0, totalHeartTypes);
-            Debug.Log("Trying to add: " + randomColor);
-
-            if (!currentOrder.Contains(randomColor))
-                currentOrder.Add(randomColor);
-
-            safety++;
-        }
-
-        Debug.Log("New Order: " + string.Join(" + ", currentOrder));
+        Heart.HeartColor randomColor = (Heart.HeartColor)Random.Range(0, totalHeartTypes);
+        if (!currentOrder.Contains(randomColor))
+            currentOrder.Add(randomColor);
+        safety++;
     }
+
+    Debug.Log("New Order: " + string.Join(" + ", currentOrder));
+
+    // Hook: tell the UI to update
+    FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
+}
 
     public void CollectHeart(Heart.HeartColor color)
     {
