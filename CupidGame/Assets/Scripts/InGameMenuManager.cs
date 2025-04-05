@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,10 +5,11 @@ public class InGameMenuManager : MonoBehaviour
 {
     public GameObject pausePanel;
     public GameObject gameOverPanel;
+    public GameObject victoryPanel;
 
     private bool isPaused = false;
 
-    private void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -30,6 +30,12 @@ public class InGameMenuManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void ShowVictory()
+    {
+        victoryPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
@@ -39,6 +45,13 @@ public class InGameMenuManager : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
