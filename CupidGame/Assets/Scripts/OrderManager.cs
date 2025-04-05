@@ -10,6 +10,7 @@ public class OrderManager : MonoBehaviour
 
     public List<Heart.HeartColor> currentOrder = new();
     private List<Heart.HeartColor> collectedHearts = new();
+    private bool gameEnded = false;
 
     private void Awake()
     {
@@ -22,37 +23,42 @@ public class OrderManager : MonoBehaviour
         GenerateNewOrder();
     }
 
-   
 
-public void GenerateNewOrder()
-{
-    collectedHearts.Clear();
-    currentOrder.Clear();
 
-    int safety = 0;
-
-    while (currentOrder.Count < orderSize && safety < 100)
+    public void GenerateNewOrder()
     {
-        Heart.HeartColor randomColor = (Heart.HeartColor)Random.Range(0, totalHeartTypes);
-        if (!currentOrder.Contains(randomColor))
-            currentOrder.Add(randomColor);
-        safety++;
+        collectedHearts.Clear();
+        currentOrder.Clear();
+        gameEnded = false;
+
+        int safety = 0;
+
+        while (currentOrder.Count < orderSize && safety < 100)
+        {
+            Heart.HeartColor randomColor = (Heart.HeartColor)Random.Range(0, totalHeartTypes);
+            if (!currentOrder.Contains(randomColor))
+                currentOrder.Add(randomColor);
+            safety++;
+        }
+
+        Debug.Log("New Order: " + string.Join(" + ", currentOrder));
+
+        // Hook: tell the UI to update
+        FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
     }
-
-    Debug.Log("New Order: " + string.Join(" + ", currentOrder));
-
-    // Hook: tell the UI to update
-    FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
-}
 
     public void CollectHeart(Heart.HeartColor color)
     {
+        if (gameEnded) return;
+
         if (!currentOrder.Contains(color))
         {
-            Debug.Log("Wrong heart! You shot: " + color + ". Expected: " + string.Join(" + ", currentOrder));
-            FindFirstObjectByType<InGameMenuManager>().ShowGameOver();
+            Debug.Log("Wrong heart! You shot: " + color);
+            gameEnded = true;
+            FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
             return;
         }
+
 
         if (collectedHearts.Contains(color))
         {
@@ -66,7 +72,9 @@ public void GenerateNewOrder()
         if (collectedHearts.Count == currentOrder.Count)
         {
             Debug.Log("Order complete! You win!");
-            FindFirstObjectByType<InGameMenuManager>().ShowVictory();
+            gameEnded = true;
+            FindFirstObjectByType<InGameMenuManager>()?.ShowVictory();
         }
     }
+
 }

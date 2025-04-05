@@ -7,7 +7,7 @@ public class Arrow : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // Clean up after time
+        Destroy(gameObject, lifetime);
     }
 
     void Update()
@@ -17,11 +17,14 @@ public class Arrow : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Arrow hit: " + other.name); //  check what we hit
+
         if (other.CompareTag("Heart"))
         {
             Heart heart = other.GetComponent<Heart>();
             if (heart != null)
             {
+                Debug.Log("Detected Heart Color: " + heart.heartColor); //  see the color
                 OrderManager.Instance.CollectHeart(heart.heartColor);
             }
 

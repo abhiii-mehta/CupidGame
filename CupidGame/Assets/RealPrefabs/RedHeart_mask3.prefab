@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8494528729758376098}
   - component: {fileID: 6716810930884904659}
   - component: {fileID: -5111410981143903506}
+  - component: {fileID: -4653872000975513979}
   m_Layer: 0
   m_Name: RedHeart_mask3
   m_TagString: Heart
@@ -124,6 +125,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 2
+--- !u!114 &-4653872000975513979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3620123808061705144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd32922bbe046e4ba5c677a2d329020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heartColor: 0
 --- !u!1001 &352989352211226942
 PrefabInstance:
   m_ObjectHideFlags: 0
