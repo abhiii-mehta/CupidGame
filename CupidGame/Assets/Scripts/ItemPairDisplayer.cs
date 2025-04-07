@@ -8,39 +8,44 @@ public class ItemPairDisplayer : MonoBehaviour
     public Image imageRight;
 
     [System.Serializable]
-    public struct ColorSprite
+    public struct VariantSprite
     {
         public Heart.HeartColor color;
+        public Heart.MaskType mask;
         public Sprite sprite;
     }
 
-    public List<ColorSprite> colorSpriteMap;
-
-    private Dictionary<Heart.HeartColor, Sprite> spriteDict;
+    public List<VariantSprite> variantSpriteMap;
+    private Dictionary<string, Sprite> spriteDict;
 
     void Awake()
     {
-        // Create quick lookup from enum to sprite
+        // Map each color + mask combo to a sprite
         spriteDict = new();
-        foreach (var entry in colorSpriteMap)
+        foreach (var entry in variantSpriteMap)
         {
-            spriteDict[entry.color] = entry.sprite;
+            string key = GetKey(entry.color, entry.mask);
+            spriteDict[key] = entry.sprite;
         }
     }
 
     void OnEnable()
     {
-        // Optional: Set empty images initially
         imageLeft.sprite = null;
         imageRight.sprite = null;
     }
 
-    public void DisplayOrder(List<Heart.HeartColor> order)
+    string GetKey(Heart.HeartColor color, Heart.MaskType mask)
+    {
+        return $"{color}_{mask}";
+    }
+
+    public void DisplayOrder(List<OrderManager.HeartVariant> order)
     {
         if (order.Count >= 2)
         {
-            imageLeft.sprite = spriteDict[order[0]];
-            imageRight.sprite = spriteDict[order[1]];
+            imageLeft.sprite = spriteDict[GetKey(order[0].color, order[0].mask)];
+            imageRight.sprite = spriteDict[GetKey(order[1].color, order[1].mask)];
         }
         else
         {

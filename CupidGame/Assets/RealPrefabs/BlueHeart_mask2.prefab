@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartColor: 1
+  maskType: 0
 --- !u!1001 &352989352211226942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +228,10 @@ PrefabInstance:
     - target: {fileID: 2091234497782626636, guid: 1180567943bc905478fac9bef136c13f, type: 3}
       propertyPath: m_Name
       value: Tear ParticleSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091234497782626636, guid: 1180567943bc905478fac9bef136c13f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5406494889697870182, guid: 1180567943bc905478fac9bef136c13f, type: 3}
       propertyPath: m_LocalScale.x

@@ -70,8 +70,7 @@ public class OrderManager : MonoBehaviour
             if (i < currentOrder.Count - 1) orderText += " | ";
         }
         Debug.Log(orderText);
-
-
+        FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
     }
 
     public void CollectHeart(Heart.HeartColor color, Heart.MaskType mask)
