@@ -17,15 +17,15 @@ public class Arrow : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Arrow hit: " + other.name); //  check what we hit
+        Debug.Log("Arrow hit: " + other.name);
 
         if (other.CompareTag("Heart"))
         {
             Heart heart = other.GetComponent<Heart>();
             if (heart != null)
             {
-                Debug.Log("Detected Heart Color: " + heart.heartColor); //  see the color
-                OrderManager.Instance.CollectHeart(heart.heartColor);
+                Debug.Log("Detected: " + heart.heartColor + " + " + heart.maskType);
+                OrderManager.Instance.CollectHeart(heart.heartColor, heart.maskType);
             }
 
             Destroy(other.gameObject);

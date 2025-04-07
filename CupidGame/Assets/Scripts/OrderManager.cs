@@ -6,11 +6,31 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
 
     public int orderSize = 2;
-    public int totalHeartTypes = 3; // You can increase this as you add more hearts
-
-    public List<Heart.HeartColor> currentOrder = new();
-    private List<Heart.HeartColor> collectedHearts = new();
+    private List<HeartVariant> currentOrder = new();
+    private List<HeartVariant> collectedHearts = new();
     private bool gameEnded = false;
+
+    public struct HeartVariant
+    {
+        public Heart.HeartColor color;
+        public Heart.MaskType mask;
+
+        public HeartVariant(Heart.HeartColor c, Heart.MaskType m)
+        {
+            color = c;
+            mask = m;
+        }
+
+        public override string ToString()
+        {
+            return color + " + " + mask;
+        }
+
+        public bool Equals(HeartVariant other)
+        {
+            return this.color == other.color && this.mask == other.mask;
+        }
+    }
 
     private void Awake()
     {
@@ -23,8 +43,6 @@ public class OrderManager : MonoBehaviour
         GenerateNewOrder();
     }
 
-
-
     public void GenerateNewOrder()
     {
         collectedHearts.Clear();
@@ -35,39 +53,50 @@ public class OrderManager : MonoBehaviour
 
         while (currentOrder.Count < orderSize && safety < 100)
         {
-            Heart.HeartColor randomColor = (Heart.HeartColor)Random.Range(0, totalHeartTypes);
-            if (!currentOrder.Contains(randomColor))
-                currentOrder.Add(randomColor);
+            Heart.HeartColor color = (Heart.HeartColor)Random.Range(0, 3);
+            Heart.MaskType mask = (Heart.MaskType)Random.Range(0, 3);
+            HeartVariant variant = new HeartVariant(color, mask);
+
+            bool alreadyInOrder = currentOrder.Exists(h => h.Equals(variant));
+            if (!alreadyInOrder)
+                currentOrder.Add(variant);
+
             safety++;
         }
+        string orderText = "New Order: ";
+        for (int i = 0; i < currentOrder.Count; i++)
+        {
+            orderText += currentOrder[i].ToString();
+            if (i < currentOrder.Count - 1) orderText += " | ";
+        }
+        Debug.Log(orderText);
 
-        Debug.Log("New Order: " + string.Join(" + ", currentOrder));
 
-        // Hook: tell the UI to update
-        FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
     }
 
-    public void CollectHeart(Heart.HeartColor color)
+    public void CollectHeart(Heart.HeartColor color, Heart.MaskType mask)
     {
         if (gameEnded) return;
 
-        if (!currentOrder.Contains(color))
+        HeartVariant shot = new HeartVariant(color, mask);
+        bool match = currentOrder.Exists(o => o.Equals(shot));
+
+        if (!match)
         {
-            Debug.Log("Wrong heart! You shot: " + color);
+            Debug.Log("Wrong heart! You shot: " + shot);
             gameEnded = true;
             FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
             return;
         }
 
-
-        if (collectedHearts.Contains(color))
+        if (collectedHearts.Exists(h => h.Equals(shot)))
         {
-            Debug.Log("Already collected: " + color);
+            Debug.Log("Already collected: " + shot);
             return;
         }
 
-        collectedHearts.Add(color);
-        Debug.Log("Collected: " + color);
+        collectedHearts.Add(shot);
+        Debug.Log("Collected: " + shot);
 
         if (collectedHearts.Count == currentOrder.Count)
         {
@@ -76,5 +105,4 @@ public class OrderManager : MonoBehaviour
             FindFirstObjectByType<InGameMenuManager>()?.ShowVictory();
         }
     }
-
 }

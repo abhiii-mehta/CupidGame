@@ -425,14 +425,14 @@ RectTransform:
   m_GameObject: {fileID: 575324402}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.60125, y: 1.60125, z: 1.60125}
+  m_LocalScale: {x: 1.7899714, y: 1.7899714, z: 1.7899714}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1129054236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: -302}
+  m_AnchoredPosition: {x: 39, y: -358}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575324404
@@ -564,7 +564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 51, y: -211}
+  m_AnchoredPosition: {x: 51, y: -261}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &661124743
@@ -906,10 +906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b12a6ca8a9eb4ff46b4118b46f2ab1dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: f4d67a9f7db0c2b4f8f3c8f3127e97ac, type: 2}
-  masterSlider: {fileID: 0}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
 --- !u!4 &1212334152
 Transform:
   m_ObjectHideFlags: 0
@@ -1384,7 +1380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47, y: -131}
+  m_AnchoredPosition: {x: 47, y: -167}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134615192

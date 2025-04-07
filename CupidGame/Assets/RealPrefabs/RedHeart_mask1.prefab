@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heartColor: 0
+  maskType: 1
 --- !u!1001 &352989352211226942
 PrefabInstance:
   m_ObjectHideFlags: 0

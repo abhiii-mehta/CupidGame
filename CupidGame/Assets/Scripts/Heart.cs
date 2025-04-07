@@ -6,8 +6,16 @@ public class Heart : MonoBehaviour
     {
         Red,
         Blue,
-        Yellow
+        Purple
+    }
+
+    public enum MaskType
+    {
+        BothEyesOpen,
+        OneEyeOpen,
+        NoEyesOpen
     }
 
     public HeartColor heartColor;
+    public MaskType maskType;
 }
