@@ -6,8 +6,12 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
 
     public int orderSize = 2;
+    public int startingArrows = 5;
+
     private List<HeartVariant> currentOrder = new();
     private List<HeartVariant> collectedHearts = new();
+    private int currentArrows;
+    private int score = 0;
     private bool gameEnded = false;
 
     public struct HeartVariant
@@ -37,9 +41,12 @@ public class OrderManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    void Start()
     {
-        Debug.Log("OrderManager started");
+        score = 0;
+        currentArrows = startingArrows;
+        GameUIManager.Instance.UpdateScore(score);
+        GameUIManager.Instance.UpdateArrows(currentArrows);
         GenerateNewOrder();
     }
 
@@ -47,7 +54,7 @@ public class OrderManager : MonoBehaviour
     {
         collectedHearts.Clear();
         currentOrder.Clear();
-        gameEnded = false;
+        this.gameEnded = false;
 
         int safety = 0;
 
@@ -63,28 +70,33 @@ public class OrderManager : MonoBehaviour
 
             safety++;
         }
+
         string orderText = "New Order: ";
         for (int i = 0; i < currentOrder.Count; i++)
         {
             orderText += currentOrder[i].ToString();
             if (i < currentOrder.Count - 1) orderText += " | ";
         }
+
         Debug.Log(orderText);
         FindFirstObjectByType<ItemPairDisplayer>()?.DisplayOrder(currentOrder);
     }
 
     public void CollectHeart(Heart.HeartColor color, Heart.MaskType mask)
     {
-        if (gameEnded) return;
+        if (this.gameEnded) return;
 
         HeartVariant shot = new HeartVariant(color, mask);
         bool match = currentOrder.Exists(o => o.Equals(shot));
 
         if (!match)
         {
-            Debug.Log("Wrong heart! You shot: " + shot);
-            gameEnded = true;
-            FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
+            if (!this.gameEnded)
+            {
+                Debug.Log("Wrong heart! You shot: " + shot);
+                this.gameEnded = true;
+                FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
+            }
             return;
         }
 
@@ -99,9 +111,25 @@ public class OrderManager : MonoBehaviour
 
         if (collectedHearts.Count == currentOrder.Count)
         {
-            Debug.Log("Order complete! You win!");
-            gameEnded = true;
-            FindFirstObjectByType<InGameMenuManager>()?.ShowVictory();
+            score++;
+            GameUIManager.Instance.UpdateScore(score);
+            Debug.Log("Order complete! Score: " + score);
+            GenerateNewOrder(); // Keep playing
+        }
+    }
+
+    public void UseArrow()
+    {
+        if (this.gameEnded) return;
+
+        currentArrows--;
+        GameUIManager.Instance.UpdateArrows(currentArrows);
+
+        if (currentArrows <= 0)
+        {
+            Debug.Log("Out of arrows!");
+            this.gameEnded = true;
+            FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
         }
     }
 }

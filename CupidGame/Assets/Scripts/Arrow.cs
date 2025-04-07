@@ -8,7 +8,14 @@ public class Arrow : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifetime);
+
+        // Reduce arrow count on shoot
+        if (OrderManager.Instance != null)
+        {
+            OrderManager.Instance.UseArrow();
+        }
     }
+
 
     void Update()
     {
