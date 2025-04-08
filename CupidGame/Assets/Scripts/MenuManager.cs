@@ -3,54 +3,55 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject soundPanel;
-    private bool soundPanelVisible = false;
-
+    public GameObject mainMenuPanel;
+    public GameObject playerSelectPanel;
     public GameObject creditsPanel;
-    private bool creditsPanelVisible = false;
-    public void ToggleSoundPanel()
+    public AudioSource audioSource;
+
+    private void Update()
     {
-        soundPanelVisible = !soundPanelVisible;
-        soundPanel.SetActive(soundPanelVisible);
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (creditsPanel.activeSelf)
+            {
+                HideCredits();
+            }
+            else if (playerSelectPanel.activeSelf)
+            {
+                mainMenuPanel.SetActive(true);
+                playerSelectPanel.SetActive(false);
+            }
+        }
     }
+
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene");
+        mainMenuPanel.SetActive(false);
+        playerSelectPanel.SetActive(true);
+    }
+
+    public void ShowCredits()
+    {
+        creditsPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
+    }
+
+    public void HideCredits()
+    {
+        creditsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+    }
+
+    public void ToggleSound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.mute = !audioSource.mute;
+        }
     }
 
     public void ExitGame()
     {
         Application.Quit();
     }
-
-    public void CloseSoundPanel()
-    {
-        soundPanelVisible = false;
-        soundPanel.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (soundPanelVisible && Input.GetKeyDown(KeyCode.Escape))
-        {
-            CloseSoundPanel();
-        }
-        else if (creditsPanelVisible && Input.GetKeyDown(KeyCode.Escape))
-        {
-            CloseCreditsPanel();
-        }
-    }
-
-    public void OpenCreditsPanel()
-    {
-        creditsPanelVisible = true;
-        creditsPanel.SetActive(true);
-    }
-
-    public void CloseCreditsPanel()
-    {
-        creditsPanelVisible = false;
-        creditsPanel.SetActive(false);
-    }
-
 }

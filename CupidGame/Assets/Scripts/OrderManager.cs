@@ -94,11 +94,14 @@ public class OrderManager : MonoBehaviour
             if (!this.gameEnded)
             {
                 Debug.Log("Wrong heart! You shot: " + shot);
+                HighScoreManager.Instance.TrySetNewHighScore(score); 
                 this.gameEnded = true;
                 FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
             }
             return;
         }
+
+
 
         if (collectedHearts.Exists(h => h.Equals(shot)))
         {
@@ -128,8 +131,11 @@ public class OrderManager : MonoBehaviour
         if (currentArrows <= 0)
         {
             Debug.Log("Out of arrows!");
+            HighScoreManager.Instance.TrySetNewHighScore(score);
             this.gameEnded = true;
             FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
         }
+
+
     }
 }

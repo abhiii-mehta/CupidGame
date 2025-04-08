@@ -3,15 +3,43 @@
   "WorkspaceRootPath": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|d:\\suse25\\gameaweek\\cupidgame\\cupidgame\\assets\\scripts\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\playerslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerslotui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|d:\\suse25\\gameaweek\\cupidgame\\cupidgame\\assets\\scripts\\playerselectui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerselectui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\playerprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerprofilemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\debugscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\debugscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\highscoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\highscoremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\arrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|d:\\suse25\\gameaweek\\cupidgame\\cupidgame\\assets\\scripts\\gameuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\gameuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -35,14 +63,6 @@
       "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mouselook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\ingamemenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ingamemenumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\assets\\scripts\\cupidshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C5B74AA8-616E-A58F-5A49-7EC0D2E90424}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cupidshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -58,11 +78,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DEbugscript.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\DEbugscript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DEbugscript.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\DEbugscript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DEbugscript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T02:06:06.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerSlotUI.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerSlotUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerSlotUI.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerSlotUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerSlotUI.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T01:10:40.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerData.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerData.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T01:10:06.64Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "PlayerProfileManager.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerProfileManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerProfileManager.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerProfileManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerProfileManager.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAUwIIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T00:35:06.305Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerSelectUI.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerSelectUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerSelectUI.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\PlayerSelectUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerSelectUI.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAA5wDwAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T00:34:15.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HighScoreManager.cs",
+              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\HighScoreManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HighScoreManager.cs",
+              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\HighScoreManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HighScoreManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T00:06:02.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "GameUIManager.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\GameUIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameUIManager.cs",
@@ -70,12 +164,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GameUIManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T23:30:57.933Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T23:30:57.933Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "ItemPairDisplayer.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\ItemPairDisplayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ItemPairDisplayer.cs",
@@ -87,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "BowblendController.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\BowblendController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BowblendController.cs",
@@ -99,31 +192,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InGameMenuManager.cs",
-              "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\InGameMenuManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InGameMenuManager.cs",
-              "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\InGameMenuManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InGameMenuManager.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowD8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T15:09:24.569Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuManager.cs",
               "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\MenuManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\MenuManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAUwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T15:09:09.823Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Heart.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\Heart.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Heart.cs",
@@ -135,20 +216,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "OrderManager.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\OrderManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\OrderManager.cs",
               "ToolTip": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\OrderManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\OrderManager.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAUwIcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAUwIUAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T14:30:22.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T14:30:22.348Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "CupidShooter.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\CupidShooter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CupidShooter.cs",
@@ -160,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Arrow.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\Arrow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Arrow.cs",
@@ -168,12 +248,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Arrow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T13:23:48.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:23:48.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "HeartFall.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\HeartFall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HeartFall.cs",
@@ -185,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "HeartSpawner.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\HeartSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HeartSpawner.cs",
@@ -197,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "MouseLook.cs",
               "DocumentMoniker": "D:\\SuSe25\\GameAWeek\\CupidGame\\CupidGame\\Assets\\Scripts\\MouseLook.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MouseLook.cs",
