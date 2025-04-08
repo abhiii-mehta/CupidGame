@@ -6,7 +6,7 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
 
     public int orderSize = 2;
-    public int startingArrows = 5;
+    public int startingArrows = 10;
 
     private List<HeartVariant> currentOrder = new();
     private List<HeartVariant> collectedHearts = new();
@@ -94,13 +94,14 @@ public class OrderManager : MonoBehaviour
             if (!this.gameEnded)
             {
                 Debug.Log("Wrong heart! You shot: " + shot);
-                var player = PlayerProfileManager.Instance.GetCurrentPlayer();
+                var player = PlayerProfileManager.Instance?.GetCurrentPlayer();
                 if (player != null && score > player.highScore)
                 {
                     player.highScore = score;
                     PlayerProfileManager.Instance.SavePlayer(player);
                     Debug.Log($"New high score saved: {score} for {player.playerName}");
                 }
+
 
                 this.gameEnded = true;
                 FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
