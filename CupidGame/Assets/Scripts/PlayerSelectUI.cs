@@ -28,10 +28,13 @@ public class PlayerSelectUI : MonoBehaviour
 
     void GenerateSlots()
     {
+        //  CLEAR OLD SLOTS FIRST
+        foreach (Transform child in playerListContainer)
+        {
+            Destroy(child.gameObject);
+        }
         slots.Clear();
 
-        // Always load saved player data
-        PlayerProfileManager.Instance.LoadPlayers();
         List<PlayerData> players = PlayerProfileManager.Instance.GetAllPlayers();
 
         for (int i = 0; i < slotCount; i++)
@@ -41,10 +44,13 @@ public class PlayerSelectUI : MonoBehaviour
 
             string name = i < players.Count ? players[i].playerName : "";
             int score = i < players.Count ? players[i].highScore : 0;
-            slot.Initialize(this, name, score);
+
+            slot.Initialize(this, name, score); //  All good now
             slots.Add(slot);
         }
+
     }
+
 
 
     public void OnPlayerSelected(PlayerData data)

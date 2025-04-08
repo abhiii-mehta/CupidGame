@@ -1,37 +1,68 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerSlotUI : MonoBehaviour
 {
-    public TMP_InputField nameInput;
+    public TMP_InputField playerInputField;
+    public TMP_Text playerNameText;
     public TMP_Text highScoreText;
     public Button deleteButton;
 
-    private PlayerSelectUI manager;
+    private PlayerSelectUI selectUI;
     private string playerName;
 
-    public void Initialize(PlayerSelectUI parent, string name, int score)
+    public void Initialize(PlayerSelectUI ui, string name, int score)
     {
-        manager = parent;
+        selectUI = ui;
         playerName = name;
 
-        nameInput.text = playerName;
-        highScoreText.text = "" + score;
+        if (!string.IsNullOrEmpty(playerName))
+        {
+            playerInputField.gameObject.SetActive(false);
+            playerNameText.gameObject.SetActive(true);
+            playerNameText.text = playerName;
+        }
+        else
+        {
+            playerInputField.gameObject.SetActive(true);
+            playerNameText.gameObject.SetActive(false);
+        }
 
-        nameInput.onEndEdit.AddListener(OnNameChanged);
-        deleteButton.onClick.AddListener(() => manager.OnPlayerDeleted(this));
+        highScoreText.text = score.ToString();
+
+        // Listen for name entry only once
+        playerInputField.onEndEdit.RemoveAllListeners();
+        playerInputField.onEndEdit.AddListener(OnNameEntered);
+
+        // Hook up delete button
+        deleteButton.onClick.RemoveAllListeners();
+        deleteButton.onClick.AddListener(OnDelete);
     }
 
-    void OnNameChanged(string newName)
+    public void OnNameEntered(string name)
     {
-        if (string.IsNullOrWhiteSpace(newName)) return;
+        if (string.IsNullOrWhiteSpace(name)) return;
 
-        PlayerData data = new PlayerData(newName);
-        PlayerProfileManager.Instance.SavePlayer(data);
-        manager.OnPlayerSelected(data);
+        playerName = name.Trim();
+        playerNameText.text = playerName;
+        playerNameText.gameObject.SetActive(true);
+        playerInputField.gameObject.SetActive(false);
+
+        PlayerProfileManager.Instance.AddPlayer(playerName);
+        PlayerProfileManager.Instance.SetCurrentPlayer(playerName);
     }
 
+    public void OnDelete()
+    {
+        if (!string.IsNullOrEmpty(playerName))
+        {
+            selectUI.OnPlayerDeleted(this);
+        }
+    }
 
-    public string GetName() => nameInput.text.Trim();
+    public string GetName()
+    {
+        return playerName;
+    }
 }

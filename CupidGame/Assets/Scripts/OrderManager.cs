@@ -94,7 +94,14 @@ public class OrderManager : MonoBehaviour
             if (!this.gameEnded)
             {
                 Debug.Log("Wrong heart! You shot: " + shot);
-                HighScoreManager.Instance.TrySetNewHighScore(score); 
+                var player = PlayerProfileManager.Instance.GetCurrentPlayer();
+                if (player != null && score > player.highScore)
+                {
+                    player.highScore = score;
+                    PlayerProfileManager.Instance.SavePlayer(player);
+                    Debug.Log($"New high score saved: {score} for {player.playerName}");
+                }
+
                 this.gameEnded = true;
                 FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
             }
@@ -131,11 +138,20 @@ public class OrderManager : MonoBehaviour
         if (currentArrows <= 0)
         {
             Debug.Log("Out of arrows!");
-            HighScoreManager.Instance.TrySetNewHighScore(score);
+            var player = PlayerProfileManager.Instance.GetCurrentPlayer();
+            if (player != null && score > player.highScore)
+            {
+                player.highScore = score;
+                PlayerProfileManager.Instance.SavePlayer(player);
+                Debug.Log($"New high score saved: {score} for {player.playerName}");
+            }
+
             this.gameEnded = true;
             FindFirstObjectByType<InGameMenuManager>()?.ShowGameOver();
         }
 
 
     }
+
 }
+
